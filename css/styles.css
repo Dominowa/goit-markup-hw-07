@@ -560,7 +560,7 @@ body {
 }
 .modal {
   position: absolute;
-  height: 576px;
+  height: 584px;
   width: 408px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -612,7 +612,7 @@ body {
   border-radius: 4px;
   left: 0px;
   top: 84px;
-  padding-left: 16px;
+  padding-left: 38px;
   outline: transparent;
 }
 
@@ -661,4 +661,111 @@ body {
   resize: none;
   padding-left: 16px;
   padding-top: 8px;
+}
+.textarea-commeent {
+  margin-top: 8px;
+}
+.input-check {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1;
+  color: #8e8f99;
+}
+.text-commant {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #8e8f99;
+}
+.text-privacy {
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #8e8f99;
+  padding-top: 16px;
+  padding-left: 10px;
+}
+.text-privacy::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.input-check:checked + .text-privacy::before {
+  border: none;
+  background-image: url(../images/Vector.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #404bbf;
+  border: 1px solid #404bbf;
+  border-radius: 2px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.bt-modal {
+  display: flex;
+  justify-content: center;
+}
+.modal-bt {
+  width: 169px;
+  height: 56px;
+  background: #4d5ae5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-top: 24px;
+  border: none;
+}
+.footer-mail {
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  background-color: #2e2f42;
+  padding-left: 16px;
+}
+.footer-mail::placeholder {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+}
+.footer-bt {
+  width: 165px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  background: #4d5ae5;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.send {
+  margin-left: 4px;
+}
+.sub-icon {
+  margin-left: 16px;
+}
+
+.footer-sub-bt {
+  display: flex;
+  gap: 24px;
 }
