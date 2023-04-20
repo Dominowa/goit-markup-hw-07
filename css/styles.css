@@ -546,9 +546,10 @@ body {
 }
 .ft-cont-flx {
   display: flex;
-  gap: 120px;
 }
-
+.footer-conteiner {
+  margin-right: 120px;
+}
 .backdrop {
   position: fixed;
   top: 0;
@@ -560,7 +561,6 @@ body {
 }
 .modal {
   position: absolute;
-  height: 584px;
   width: 408px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -568,7 +568,7 @@ body {
   border-radius: 4px;
   top: 50%;
   left: 50%;
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   transform: translate(-50%, -50%) scale(1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -579,6 +579,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -614,6 +617,7 @@ body {
   top: 84px;
   padding-left: 38px;
   outline: transparent;
+  margin-top: 8px;
 }
 
 .modal-title {
@@ -632,6 +636,12 @@ body {
   fill: #4d5ae5;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-btn:focus,
+.modal-btn:hover {
+  fill: #ffffff;
+  background-color: #4d5ae5;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .user-help {
   font-weight: 400;
   font-size: 12px;
@@ -639,9 +649,10 @@ body {
   color: #8e8f99;
 }
 .modal-icon-menu {
+  display: block;
   position: absolute;
   left: 16px;
-  top: 50%;
+  top: 20%;
   transform: translateY(-50%);
 }
 .input-wrap {
@@ -662,6 +673,7 @@ body {
   padding-left: 16px;
   padding-top: 8px;
 }
+
 .textarea-commeent {
   margin-top: 8px;
 }
@@ -685,6 +697,7 @@ body {
   color: #8e8f99;
   padding-top: 16px;
   padding-left: 10px;
+  letter-spacing: 0.04em;
 }
 .text-privacy::before {
   content: '';
@@ -728,6 +741,7 @@ body {
   margin-top: 24px;
   border: none;
 }
+
 .footer-mail {
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -736,6 +750,7 @@ body {
   height: 40px;
   background-color: #2e2f42;
   padding-left: 16px;
+  color: #ffffff;
 }
 .footer-mail::placeholder {
   color: #ffffff;
@@ -760,6 +775,7 @@ body {
 
 .send {
   margin-left: 4px;
+  color: #4d5ae5;
 }
 .sub-icon {
   margin-left: 16px;
@@ -768,4 +784,7 @@ body {
 .footer-sub-bt {
   display: flex;
   gap: 24px;
+}
+.fotter-sub-menu {
+  margin-left: auto;
 }
