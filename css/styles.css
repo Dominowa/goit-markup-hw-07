@@ -169,8 +169,6 @@ body {
 .list-img {
   background-color: var(--color-white);
   margin-bottom: 72px;
-  margin-left: 67px;
-  margin-right: 67px;
 }
 
 .section-doing {
@@ -794,9 +792,21 @@ body {
   margin-left: auto;
 }
 
-/* Mobile */
-@media screen and (min-width: 428px;) {
+@media screen and (min-width: 480px) {
   .container {
     width: 428px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .list-conteiner {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1158px;
   }
 }
