@@ -28,6 +28,9 @@ address {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 body {
   background: var(--color-white);
@@ -36,7 +39,6 @@ body {
 }
 /* Container */
 .container {
-  width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -166,6 +168,9 @@ body {
 
 .list-img {
   background-color: var(--color-white);
+  margin-bottom: 72px;
+  margin-left: 67px;
+  margin-right: 67px;
 }
 
 .section-doing {
@@ -374,7 +379,7 @@ body {
   padding-bottom: 120px;
 }
 .list-conteiner {
-  display: flex;
+  display: block;
   gap: 24px;
   justify-content: center;
   margin-top: 72px;
@@ -787,4 +792,11 @@ body {
 }
 .fotter-sub-menu {
   margin-left: auto;
+}
+
+/* Mobile */
+@media screen and (min-width: 428px;) {
+  .container {
+    width: 428px;
+  }
 }
