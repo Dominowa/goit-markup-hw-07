@@ -817,6 +817,8 @@ body {
   .container {
     width: 428px;
   }
+  .about-company {
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -840,9 +842,8 @@ body {
     justify-content: start;
   }
   .about-company {
-    flex-direction: unset;
   }
-}
+ 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1158px;
