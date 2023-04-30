@@ -156,6 +156,11 @@ body {
 
 .about {
   line-height: 1.5;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #434455;
 }
 
 .section-title {
@@ -360,6 +365,7 @@ body {
   border-radius: 4px;
 }
 .about-company {
+  flex-direction: column;
   display: flex;
   gap: 24px;
 }
@@ -374,8 +380,10 @@ body {
   justify-content: center;
 }
 .section-wedo {
+  display: none;
   padding-bottom: 120px;
 }
+
 .list-conteiner {
   display: block;
   gap: 24px;
@@ -430,8 +438,19 @@ body {
   padding-top: 96px;
   padding-bottom: 120px;
 }
+
 .about-hh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
 }
 
 .thumb {
@@ -444,6 +463,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
+  display: none;
 }
 .ourteam-soc-list {
   display: flex;
@@ -496,8 +516,8 @@ body {
   border-radius: 4px;
 }
 .customers-soc-item {
-  width: 168px;
-  height: 88px;
+  flex-basis: calc(100% / 2 - 16px);
+  margin-bottom: 38px;
 }
 .customers-soc-icon {
   fill: currentColor;
@@ -511,6 +531,7 @@ body {
 
 .customers-ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
 }
@@ -803,10 +824,37 @@ body {
   }
   .list-conteiner {
     display: flex;
+    flex-wrap: wrap;
+  }
+  .customers-ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .customers-soc-item {
+    width: 168px;
+    height: 88px;
+    flex-basis: calc(100% / 3 - 16px);
+  }
+  .about-hh {
+    display: flex;
+    justify-content: start;
+  }
+  .about-company {
+    flex-direction: unset;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 1158px;
+  }
+  .customers-soc-item {
+    width: 168px;
+    height: 88px;
+    flex-wrap: nowrap;
+    margin-bottom: 0px;
+    flex-basis: calc(100% / 7 - 16px);
+  }
+  .section-wedo {
+    display: flex;
   }
 }
