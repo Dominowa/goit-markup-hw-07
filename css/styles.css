@@ -842,10 +842,7 @@ body {
   .about-company {
     flex-direction: row;
   }
-.thumb-list{
-  width: 356px;
 }
- 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1158px;
@@ -858,6 +855,9 @@ body {
     flex-basis: calc(100% / 7 - 16px);
   }
   .section-wedo {
+    display: flex;
+  }
+  .thumb {
     display: flex;
   }
 }
