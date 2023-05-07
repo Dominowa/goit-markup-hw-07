@@ -28,9 +28,6 @@ address {
 }
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
-  width: 100%;
 }
 body {
   background: var(--color-white);
@@ -39,12 +36,24 @@ body {
 }
 /* Container */
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  min-width: 320px;
+  max-width: 428px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
 
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+}
 .list {
   list-style: none;
 }
@@ -93,7 +102,8 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
-  margin-right: 76px;
+  margin-right: auto;
+  /* margin-right: 76px; */
 }
 .first-word {
   color: var(--color-accent);
@@ -156,11 +166,6 @@ body {
 
 .about {
   line-height: 1.5;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #434455;
 }
 
 .section-title {
@@ -173,7 +178,6 @@ body {
 
 .list-img {
   background-color: var(--color-white);
-  margin-bottom: 72px;
 }
 
 .section-doing {
@@ -340,16 +344,28 @@ body {
 .address-list {
   display: flex;
 }
+@media screen and (max-width: 767px) {
+  .address-list {
+    display: none;
+  }
+}
+
 .navigation {
   display: flex;
   align-items: center;
   margin-right: auto;
   padding: 24px;
 }
+
 .header-list {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+@media screen and (max-width: 767px) {
+  .header-list {
+    display: none;
+  }
 }
 
 .header-container {
@@ -365,7 +381,6 @@ body {
   border-radius: 4px;
 }
 .about-company {
-  flex-direction: column;
   display: flex;
   gap: 24px;
 }
@@ -380,12 +395,10 @@ body {
   justify-content: center;
 }
 .section-wedo {
-  display: none;
   padding-bottom: 120px;
 }
-
 .list-conteiner {
-  display: block;
+  display: flex;
   gap: 24px;
   justify-content: center;
   margin-top: 72px;
@@ -438,19 +451,8 @@ body {
   padding-top: 96px;
   padding-bottom: 120px;
 }
-
 .about-hh {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 8px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 40px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: #2e2f42;
 }
 
 .thumb {
@@ -463,7 +465,6 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
-  display: none;
 }
 .ourteam-soc-list {
   display: flex;
@@ -516,8 +517,8 @@ body {
   border-radius: 4px;
 }
 .customers-soc-item {
-  flex-basis: calc(100% / 2 - 16px);
-  margin-bottom: 38px;
+  width: 168px;
+  height: 88px;
 }
 .customers-soc-icon {
   fill: currentColor;
@@ -531,7 +532,6 @@ body {
 
 .customers-ul {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
 }
@@ -813,51 +813,57 @@ body {
   margin-left: auto;
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-    width: 428px;
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
   }
 }
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-  .list-conteiner {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .customers-ul {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .customers-soc-item {
-    width: 168px;
-    height: 88px;
-    flex-basis: calc(100% / 3 - 16px);
-  }
-  .about-hh {
-    display: flex;
-    justify-content: start;
-  }
-  .about-company {
-    flex-direction: row;
-  }
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
 }
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1158px;
-  }
-  .customers-soc-item {
-    width: 168px;
-    height: 88px;
-    flex-wrap: nowrap;
-    margin-bottom: 0px;
-    flex-basis: calc(100% / 7 - 16px);
-  }
-  .section-wedo {
-    display: flex;
-  }
-  .thumb {
-    display: flex;
-  }
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
 }
