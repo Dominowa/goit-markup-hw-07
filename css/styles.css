@@ -78,7 +78,12 @@ body {
 
 .studio-logo {
   color: var(--color-title-text);
-  margin-right: 120px;
+  /* margin-right: 120px; */
+}
+@media screen and (min-width: 768px) {
+  .studio-logo {
+    margin-right: 120px;
+  }
 }
 
 .address {
@@ -165,6 +170,10 @@ body {
 }
 
 .about {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #434455;
   line-height: 1.5;
 }
 
@@ -194,11 +203,20 @@ body {
 .hero-title {
   color: var(--color-white);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 0.9;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 0.93;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
 }
 
 /*button */
@@ -391,7 +409,18 @@ body {
 }
 .about-company {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px 24px;
+}
+@media screen and (min-width: 768px) {
+  .benefites-item {
+    width: 356px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .benefites-item {
+    width: 262px;
+  }
 }
 .about-section {
   padding-top: 120px;
@@ -461,7 +490,36 @@ body {
   padding-bottom: 120px;
 }
 .about-hh {
+  display: flex;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 0.9;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
   margin-bottom: 8px;
+}
+@media screen and (max-width: 767px) {
+  .about-hh {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .about-hh {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+  }
+  .about {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #434455;
+  }
 }
 
 .thumb {
@@ -474,6 +532,11 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
+}
+@media screen and (max-width: 1157px) {
+  .thumb {
+    display: none;
+  }
 }
 .ourteam-soc-list {
   display: flex;
