@@ -146,8 +146,8 @@ body {
 
 .mail {
   color: var(--color-primary-text);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 0.85;
   text-decoration: none;
   letter-spacing: 0.02em;
 }
@@ -249,16 +249,16 @@ body {
     url(../images/Dark-bgmob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 112px;
+  padding: 112px 0px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 1157px) {
   .hero {
-    padding: 180px;
+    padding: 180px 0px;
     max-width: 1440px;
-    background-size: 1440px;
+    background-size: cover;
   }
 }
 @media screen and (max-width: 428px) {
@@ -474,6 +474,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .benefites-item {
+    width: calc((100% - 72px) / 2);
   }
 }
 @media screen and (min-width: 1158px) {
@@ -711,7 +712,7 @@ body {
 }
 .footer-soc-list {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 16px;
 }
 .footer-soc-item {
@@ -738,8 +739,13 @@ body {
 .ft-cont-flx {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 72px 24px;
+}
+@media screen and (min-width: 768px) {
+  .ft-cont-flx {
+    width: 582px;
+  }
 }
 
 .footer-conteiner {
@@ -781,6 +787,11 @@ body {
   padding: 72px 24px 24px 24px;
   transform: translate(-50%, -50%) scale(1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 427px) {
+  .modal {
+    width: 300px;
+  }
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -964,7 +975,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .footer-mail {
-    width: 398px;
+    width: 300px;
   }
 }
 .footer-mail::placeholder {
@@ -1023,7 +1034,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .fotter-sub-menu {
-    margin-left: 40px;
   }
 }
 .menu-toggle {
